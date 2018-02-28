@@ -292,7 +292,8 @@ bool nfa::check_file (const string &file) {
 	}
 }
 
-void nfa::execute () {
+void nfa::execute (const string &file) {
 	initialize_nfa ();
 	to_DFA ();
+	check_file (file);
 }
